@@ -2,12 +2,7 @@ const zod = require('zod')
 const { User } = require('../DB')
 
 
-const signUpSchema = zod.object({
-    firstname:zod.string(),
-    username:zod.string(),
-    password:zod.string(),
-    email:zod.email()
-})
+
 
 const signUpValidation = (req,res,next)=>{
     const username = req.body.username
